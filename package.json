@@ -1,0 +1,13 @@
+{
+  "name": "node-api-rest-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.2.6",
+    "mongoose": "3.6.11",
+    "mongoose-ip-address": "0.0.6",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9"
+  }
+}

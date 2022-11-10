@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "7834988b-1afc-46f9-a217-8544fa6de764",
+		"name": "Gateway API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24209295"
+	},
+	"item": [
+		{
+			"name": "Add Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \t\t\"serialNumber\":    \"98874456556\",\n  \t\t\"humanReadableName\": \t  \"2020\",\n  \t\t\"ipv4Address\":  \"122.0.0.127\",\n  \t\t\"peripheralDevices\": [{\n                \t\"uid\":           458,\n  \t\t            \"vendor\":        \"2020\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"off\"\n          },{\n                \t\"uid\":           458,\n  \t\t            \"vendor\":        \"2020\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"off\"\n          },{\n                \t\"uid\":           458,\n  \t\t            \"vendor\":        \"2020\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"off\"\n          },{\n                \t\"uid\":           458,\n  \t\t            \"vendor\":        \"2020\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"off\"\n          }    \n        ]  \n  \t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gateway",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Gateway",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \t\t\"serialNumber\":    \"999999\",\n  \t\t\"humanReadableName\": \t  \"20204455\",\n  \t\t\"ipv4Address\":  \"122.0.0.127\",\n  \t\t\"peripheralDevices\": [{\n                \t\"uid\":           458,\n  \t\t            \"vendor\":        \"2020\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"off\"\n          }, \n          {\n                \t\"uid\":           47,\n  \t\t            \"vendor\":        \"202045\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"On\"\n          }          \n        ]  \n  \t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gateway/6363cccb1f4cc48c4c000002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gateway",
+						"6363cccb1f4cc48c4c000002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add PeripheralDevice",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"peripheralDevice\": {\n                \t\"uid\":           41477,\n  \t\t            \"vendor\":        \"202066666666444\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"off\"\n          }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gateway/devices/6363ee029df20acf68000003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gateway",
+						"devices",
+						"6363ee029df20acf68000003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Gateway ByID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/gateway/6363cccb1f4cc48c4c000002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gateway",
+						"6363cccb1f4cc48c4c000002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Gateways",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/gateways",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gateways"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Gateway by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/gateway/6363e66cd83e1b1262000018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gateway",
+						"6363e66cd83e1b1262000018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete PeripheralDevice",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"peripheralDevice\": {\n                \t\"uid\":           41477,\n  \t\t            \"vendor\":        \"202066666666444\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"off\"\n          }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gateway/devices/6363ee029df20acf68000003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gateway",
+						"devices",
+						"6363ee029df20acf68000003"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
